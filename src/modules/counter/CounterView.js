@@ -56,7 +56,7 @@ const CounterView = React.createClass({
   },
   render() {
     const loadingStyle = this.props.loading
-      ? {backgroundColor: '#eee'}
+      ? {backgroundColor: 'red'}
       : null;
 
     return (

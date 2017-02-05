@@ -38,9 +38,8 @@ const AppView = React.createClass({
     }
 
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1,backgroundColor:"#fff"}}>
         <NavigationViewContainer />
-        {__DEV__ && <DeveloperMenu />}
       </View>
     );
   }
@@ -49,7 +48,7 @@ const AppView = React.createClass({
 const styles = StyleSheet.create({
   centered: {
     flex: 1,
-    alignSelf: 'center'
+    alignSelf: 'center',
   }
 });
 

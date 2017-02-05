@@ -1,7 +1,7 @@
 import {Map, fromJS} from 'immutable';
 import {loop, combineReducers} from 'redux-loop';
 import NavigationStateReducer from '../modules/navigation/NavigationState';
-import CounterStateReducer from '../modules/counter/CounterState';
+import CounterStateReducer from '../modules/login/LoginState';
 import SessionStateReducer, {RESET_STATE} from '../modules/session/SessionState';
 
 const reducers = {

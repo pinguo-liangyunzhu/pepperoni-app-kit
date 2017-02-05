@@ -13,7 +13,7 @@ import AppRouter from '../AppRouter';
 import TabBar from '../../components/TabBar';
 
 // Customize bottom tab bar height here if desired
-const TAB_BAR_HEIGHT = 50;
+const TAB_BAR_HEIGHT = 0;
 
 const NavigationView = React.createClass({
   propTypes: {
@@ -35,6 +35,7 @@ const NavigationView = React.createClass({
   // NavigationHeader accepts a prop style
   // NavigationHeader.title accepts a prop textStyle
   renderHeader(sceneProps) {
+    console.log(sceneProps);
     return (
       <NavigationHeader
         {...sceneProps}
@@ -53,7 +54,7 @@ const NavigationView = React.createClass({
     // render scene and apply padding to cover
     // for app bar and navigation bar
     return (
-      <View style={styles.sceneContainer}>
+      <View>
         {AppRouter(sceneProps)}
       </View>
     );
@@ -68,15 +69,9 @@ const NavigationView = React.createClass({
           key={'stack_' + tabKey}
           onNavigateBack={this.props.onNavigateBack}
           navigationState={scenes}
-          renderHeader={this.renderHeader}
           renderScene={this.renderScene}
         />
-        <TabBar
-          height={TAB_BAR_HEIGHT}
-          tabs={tabs}
-          currentTabIndex={tabs.index}
-          switchTab={this.props.switchTab}
-        />
+        
       </View>
     );
   }
@@ -87,8 +82,7 @@ const styles = StyleSheet.create({
     flex: 1
   },
   sceneContainer: {
-    flex: 1,
-    marginBottom: TAB_BAR_HEIGHT
+    flex: 1
   }
 });
 
