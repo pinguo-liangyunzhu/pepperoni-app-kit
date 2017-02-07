@@ -10,8 +10,7 @@ import LoginViewContainer from './login/LoginViewContainer';
  */
 export default function AppRouter(props) {
   const key = props.scene.route.key;
-
-  if (key === 'Counter') {
+  if (key === 'Login') {
     return <LoginViewContainer />;
   }
 

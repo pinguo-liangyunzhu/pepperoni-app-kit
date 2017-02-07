@@ -1,11 +1,13 @@
 import Promise from 'bluebird';
 import HttpError from 'standard-http-error';
-import {getConfiguration} from '../utils/configuration';
+import {getConfiguration,setConfiguration} from '../utils/configuration';
 import {getAuthenticationToken} from '../utils/authentication';
 
 const EventEmitter = require('event-emitter');
 
 const TIMEOUT = 6000;
+
+setConfiguration('API_ROOT','https://toolchain.camera360.com');
 
 /**
  * All HTTP errors are emitted on this channel for interested listeners

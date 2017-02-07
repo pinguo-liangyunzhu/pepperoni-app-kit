@@ -3,3 +3,4 @@ export async function generateRandomNumber() {
   return new Promise((res) => setTimeout(res, 1000))
     .then(() => Math.floor(Math.random() * 100));
 }
+
